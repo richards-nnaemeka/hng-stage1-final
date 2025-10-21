@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HNG Stage 1 - Success!</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+        }
+        .success { 
+            font-size: 2.5em; 
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .info { 
+            font-size: 1.2em; 
+            margin: 15px 0;
+            opacity: 0.9;
+        }
+        .container {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            max-width: 600px;
+            margin: 50px auto;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .timestamp {
+            font-family: monospace;
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success">🎉 HNG Stage 1 Deployment Successful!</div>
+        <div class="info">✅ Automated Bash script deployment</div>
+        <div class="info">✅ Docker container running</div>
+        <div class="info">✅ Nginx reverse proxy configured</div>
+        <div class="info">✅ External access working</div>
+        <div class="info">
+            Timestamp: <span class="timestamp" id="timestamp"></span>
+        </div>
+        <div class="info">
+            Repository: richards-nnaemeka/test-docker-app
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toISOString();
+    </script>
+</body>
+</html>
